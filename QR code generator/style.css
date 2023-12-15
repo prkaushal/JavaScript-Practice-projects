@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: rgb(11, 13, 14);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 20px;
+}
+button{
+    padding: 10px 20px;
+    background-color: rgb(74, 86, 249);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+}
+
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    outline: none;
+    font-size: 12px;
+}
+
+.qr{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+img{
+    width: 100%;
+    padding: 10px;
+}
+
+.qr.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #ffffff;
+
+}
+
+.error{
+    animation: shake 0.1s linear 5;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
